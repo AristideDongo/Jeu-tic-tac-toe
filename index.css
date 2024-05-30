@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*,
+::before,
+::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+}
+
+html {
+ min-width: 320px;
+}
+
+body {
+ font-family: Roboto, sans-serif;
+ color: #ffffff;
+ background-image: url(pexels-pixabay-220057.jpg);
+ background-size: cover;
+}
+
+header,
+h2 {
+ margin: 50px auto 0;
+}
+
+h1,
+h2{
+ text-align: center;
+ font-size: 50px;
+}
+@media  screen and  (max-width: 425px) {
+ h1,
+ h2 {
+  font-size: 40px;
+ }
+}
+
+main {
+ min-height: 470px;
+}
+
+.container {
+ display: grid;
+ grid-template: repeat(3, 100px) / repeat(3, 100px);
+ width: 300px;
+ height: 300px;
+ margin: 50px auto;
+}
+
+.cell {
+ width: 100px;
+ height: 100px;
+ color: #f1f1f1;
+ border: 2px solid #0062d1;
+ cursor: pointer;
+ font-size: 60px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+}
+
+.btn-rejouer {
+ margin: 2rem auto;
+ padding: 1rem;
+ font-size: 20px;
+ display: flex;
+ width: 50%;
+ border-radius: 10px;
+ border: 2px white solid;
+ background-color: transparent;
+ color: rgb(255, 255, 255);
+ cursor: pointer;
+} 
+
+.btn-rejouer:hover,
+.btn-rejouer:focus {
+ box-shadow: #859398 4px 4px 13px 5px;
+}
+
+.btn-rejouer:active,
+.btn-rejouer:focus-within {
+ box-shadow: inset white 0px 0px 15px 7px;
+}
