@@ -59,24 +59,35 @@ function tourOrdinateur() {
   // Choix aléatoire d'une case vide pour l'ordinateur
   let caseAleatoire;
   let caseVideTrouvee = false;
+  let essais = 0;
+  const MAX_ESSAIS = 20; // Limite de tentatives
 
-  // Recherche d'une case vide
+  // Recherche d'une case vide avec une limite d'essais
   do {
     caseAleatoire = Math.floor(Math.random() * 9); // Génère un nombre aléatoire entre 0 et 8
-    console.log("Case aléatoire choisie :", caseAleatoire);
-    console.log("État actuel de partieEnCours :", partieEnCours);
 
     if (partieEnCours[caseAleatoire] === "") {
       caseVideTrouvee = true;
     }
+
+    essais++;
+
+    // Si on dépasse le nombre maximum d'essais, sortir de la boucle
+    if (essais >= MAX_ESSAIS) {
+      console.error("Limite d'essais atteinte sans trouver de case vide.");
+      break;
+    }
   } while (!caseVideTrouvee);
 
-  // Tour de l'ordinateur
-  jouerCase(caseAleatoire, joueurOrdinateur);
+  // Si une case vide a été trouvée, jouer le coup de l'ordinateur
+  if (caseVideTrouvee) {
+    jouerCase(caseAleatoire, joueurOrdinateur);
 
-  // Vérification de la fin de partie après le coup de l'ordinateur
-  validationResultats();
+    // Vérification de la fin de partie après le coup de l'ordinateur
+    validationResultats();
+  }
 }
+
 
 function jouerCase(index, joueur) {
   partieEnCours[index] = joueur;

@@ -13,10 +13,9 @@ html {
 }
 
 body {
- font-family: Roboto, sans-serif;
+ font-family: "Roboto", sans-serif;
  color: #ffffff;
- background: url(pexels-pixabay-220057.jpg);
- background-size: cover;
+ background: #836208d8;
 }
 
 header,
@@ -52,13 +51,13 @@ main {
  width: 100px;
  height: 100px;
  color: #f1f1f1;
- border: 2px solid #ffffff;
+ border: 2px solid #000000;
  cursor: pointer;
  font-size: 60px;
  display: flex;
  justify-content: center;
  align-items: center;
- border-radius: 50%;
+ border-radius: 100%;
 }
 
 .btn-rejouer {
@@ -76,10 +75,10 @@ main {
 
 .btn-rejouer:hover,
 .btn-rejouer:focus {
- box-shadow: #859398 4px 4px 13px 5px;
+ box-shadow: #01ff01 4px 4px 13px 5px;
 }
 
 .btn-rejouer:active,
 .btn-rejouer:focus-within {
- box-shadow: inset white 0px 0px 15px 7px;
+ box-shadow: inset rgb(115, 253, 3) 0px 0px 15px 7px;
 }
